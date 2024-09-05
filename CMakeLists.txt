@@ -35,9 +35,9 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wextra -Wpedantic")
 #Tests:
 
 include(FetchContent)
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+FetchContent_Declare(googletest
+    GIT_REPOSITORY https://github.com/google/googletest
+    GIT_TAG v1.15.0
 )
 FetchContent_MakeAvailable(googletest)
 add_library(GTest::GTest INTERFACE IMPORTED)
